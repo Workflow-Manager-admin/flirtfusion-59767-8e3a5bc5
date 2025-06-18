@@ -7,47 +7,35 @@
 <i> [webpack-dev-server] On Your Network (IPv4): http://172.17.0.2:3000/
 <i> [webpack-dev-server] Content not from webpack is served from './public' directory
 Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-asset bundle.js 1.42 MiB [emitted] (name: main)
+asset bundle.js 1.44 MiB [emitted] (name: main)
 asset index.html 1.98 KiB [emitted]
 runtime modules 27.6 KiB 14 modules
-modules by path ./node_modules/ 1.24 MiB 32 modules
-modules by path ./src/ 25.1 KiB
-  modules by path ./src/*.css 16.5 KiB 6 modules
-  modules by path ./src/*.js 8.61 KiB
-    ./src/index.js 530 bytes [built] [code generated]
-    + 2 modules
-modules by path ./.ve/ 15.1 KiB
-  modules by path ./.ve/*.js 10.6 KiB 2 modules
-  modules by path ./.ve/*.css 2.93 KiB
-    ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
-    ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
-  ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
+javascript modules 1.29 MiB
+  modules by path ./node_modules/ 1.24 MiB 32 modules
+  modules by path ./src/ 33.4 KiB
+    modules by path ./src/*.css 21.4 KiB 8 modules
+    modules by path ./src/*.js 9.87 KiB 4 modules
+    ./src/sidebar/MoodBoard.js 2.1 KiB [built] [code generated]
+  modules by path ./.ve/ 15.1 KiB
+    modules by path ./.ve/*.js 10.6 KiB 2 modules
+    modules by path ./.ve/*.css 2.93 KiB 2 modules
+    ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
 data:image/svg+xml,%3Csvg width=%27.. 409 bytes [built] [code generated]
-webpack 5.99.9 compiled successfully in 1386 ms
+webpack 5.99.9 compiled successfully in 1262 ms
 assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.47 MiB
-  asset bundle.js 1.44 MiB [emitted] (name: main)
-  asset main.ad33b6e79d8efc0749e9.hot-update.js 28.4 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.ad33b6e79d8efc0749e9.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.47 MiB = bundle.js 1.44 MiB main.ad33b6e79d8efc0749e9.hot-update.js 28.4 KiB
-cached modules 1.27 MiB [cached] 46 modules
+assets by path *.js 1.49 MiB
+  asset bundle.js 1.46 MiB [emitted] (name: main)
+  asset main.50d2626152e13258430c.hot-update.js 31.6 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.50d2626152e13258430c.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.49 MiB = bundle.js 1.46 MiB main.50d2626152e13258430c.hot-update.js 31.6 KiB
+cached modules 1.28 MiB [cached] 50 modules
 runtime modules 27.6 KiB 14 modules
-javascript modules 15 KiB
-  modules by path ./src/*.js 7.99 KiB
-    ./src/MainContainer.js 7.02 KiB [built] [code generated]
-    ./src/Sidebar.js 989 bytes [built] [code generated]
-  modules by path ./src/*.css 4.89 KiB
-    ./src/Sidebar.css 2.23 KiB [built] [code generated]
-    ./node_modules/css-loader/dist/cjs.js!./src/Sidebar.css 2.66 KiB [built] [code generated]
-  ./src/sidebar/MoodBoard.js 2.1 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 179 ms
-assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.44 MiB
-  asset bundle.js 1.44 MiB [emitted] (name: main)
-  asset main.e911a4b7bb1d25645f30.hot-update.js 3.9 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.e911a4b7bb1d25645f30.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.44 MiB = bundle.js 1.44 MiB main.e911a4b7bb1d25645f30.hot-update.js 3.9 KiB
-cached modules 1.29 MiB [cached] 50 modules
-runtime modules 27.6 KiB 14 modules
-./src/App.js 1.37 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 43 ms
+javascript modules 17.4 KiB
+  modules by path ./src/*.js 8.19 KiB
+    ./src/MainContainer.js 7.16 KiB [built] [code generated]
+    ./src/RightSidebar.js 1.03 KiB [built] [code generated]
+  modules by path ./src/*.css 6 KiB
+    ./src/RightSidebar.css 2.25 KiB [built] [code generated]
+    ./node_modules/css-loader/dist/cjs.js!./src/RightSidebar.css 3.75 KiB [built] [code generated]
+  ./src/sidebar/FlirtyStack.js 3.17 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 151 ms
