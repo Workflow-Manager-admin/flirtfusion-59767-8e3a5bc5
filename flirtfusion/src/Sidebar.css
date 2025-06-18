@@ -1,0 +1,107 @@
+.sidebar {
+  width: 270px;
+  min-width: 180px;
+  background: rgba(255,255,255,0.16);
+  backdrop-filter: blur(12px);
+  border-top-right-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+  padding: 34px 12px 20px 12px;
+  box-shadow: 4px 0 24px -8px #f7cbff38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 75px;
+    min-width: 52px;
+    padding: 16px 4px 12px 2px;
+  }
+}
+
+.sidebar-module {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mood-board {
+  width: 98%;
+  min-height: 175px;
+  background: linear-gradient(110deg, #ffd70036 50%, #ffb6c120 100%);
+  border-radius: 1.3rem;
+  box-shadow: 0 2px 12px #fdb2f52c;
+  padding: 16px 10px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.23s;
+}
+
+.sidebar .section-title {
+  font-size: 1.1rem;
+  color: #ce3da0;
+  font-weight: 720;
+  margin-bottom: 13px;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1.2px 13px #f7cfff48;
+  text-align: center;
+}
+
+.mood-rotating-icon {
+  font-size: 2.9rem;
+  margin-bottom: 8px;
+  animation: mood-spin 4s infinite linear;
+  filter: drop-shadow(0 1.5px 7px #ffd70088);
+}
+
+@keyframes mood-spin {
+  0% {transform: rotate(0deg);}
+  82% {transform: rotate(38deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.mood-quote {
+  color: #a143aa;
+  font-size: 1.07rem;
+  font-style: italic;
+  font-weight: 420;
+  text-align: center;
+  margin-bottom: 8px;
+  margin-top: 7px;
+  min-height: 40px;
+  transition: color 0.23s;
+  background: rgba(255, 246, 224, 0.20);
+  border-radius: 0.55em;
+  padding: 6px 5px;
+}
+
+.mood-love-vibe {
+  font-size: 1.04rem;
+  font-weight: 660;
+  background: -webkit-linear-gradient(90deg, #ffb6c1 35%, #dda0dd 80%, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1.5px 7px #ffd70054;
+  padding-top: 2px;
+  letter-spacing: 0.09em;
+}
+
+/* Placeholder modules for future expansion */
+.sidebar-module.placeholder {
+  min-height: 70px;
+  justify-content: center;
+  color: #dcbbe7;
+  font-style: italic;
+  opacity: 0.55;
+  font-size: 0.99rem;
+}

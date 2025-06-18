@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./MainContainer.css";
+import Sidebar from "./Sidebar";
 
 // Sample sassy/flirty verdicts and lines
 const verdicts = [
@@ -59,9 +60,10 @@ function MainContainer() {
   };
 
   return (
-    <div className="flirtfusion-bg">
+    <div className="flirtfusion-bg" style={{ display: "flex", minHeight: "100vh" }}>
+      <Sidebar />
       <FloatingBackground />
-      <div className="flirtfusion-center">
+      <div className="flirtfusion-center" style={{ flex: 1, zIndex: 1, position: "relative" }}>
         <div className="flirtfusion-card">
           <h2 className="ff-title">💘 FlirtFusion</h2>
           <p className="ff-tagline">
