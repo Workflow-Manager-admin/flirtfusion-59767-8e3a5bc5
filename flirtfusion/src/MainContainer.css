@@ -1,0 +1,266 @@
+.flirtfusion-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffb6c1 0%, #dda0dd 50%, #ffd700 100%);
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+.floating-bg-anim {
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  animation: ff-float infinite linear;
+  /* Will randomize animationDuration inline */
+  opacity: 0.7;
+  filter: drop-shadow(0 2px 6px rgba(255,192,203,0.12));
+  user-select: none;
+  will-change: transform, opacity;
+}
+
+@keyframes ff-float {
+  0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.75;}
+  10% { opacity: 0.93;}
+  50% { opacity: 0.99;}
+  90% { opacity: 0.7;}
+  100% { transform: translateY(-96vh) scale(1.15) rotate(9deg); opacity: 0;}
+}
+
+.flirtfusion-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: 1;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.flirtfusion-card {
+  background: rgba(255, 255, 255, 0.23);
+  box-shadow: 0 6px 32px 4px rgba(173, 152, 255, 0.13), 0 1.5px 10px 0 rgba(255,184,222,0.18);
+  border-radius: 2.2rem;
+  padding: 2.6rem 2.3rem 2rem 2.3rem;
+  max-width: 370px;
+  width: 96vw;
+  backdrop-filter: blur(14px) brightness(1.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: ff-card-fadein 1s cubic-bezier(.41,.76,.45,1.11);
+}
+
+@keyframes ff-card-fadein {
+  from { opacity:0; transform: scale(0.97);}
+  to { opacity:1; transform: scale(1);}
+}
+
+.ff-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  background: -webkit-linear-gradient(90deg, #ffb6c1, #dda0dd 75%, #ffd700);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.1em 0;
+  text-shadow: 0 2px 18px #ffc6ea61;
+  text-align: center;
+}
+
+.ff-tagline {
+  font-weight: 420;
+  color: #dd5cf7;
+  font-size: 1.05rem;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.ff-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ff-input {
+  font-size: 1.05rem;
+  border: none;
+  outline: none;
+  border-radius: 1.1em;
+  padding: 12px 1em;
+  background: rgba(255,255,255, 0.70);
+  margin-bottom: 0.1em;
+  color: #632857;
+  box-shadow: 0 3px 10px -4px #fbb2cf28;
+  transition: box-shadow 0.16s;
+  width: 100%;
+}
+.ff-input:focus {
+  box-shadow: 0 4.5px 20px -2px #df6cff45;
+  background: #fff1fd;
+}
+
+.ff-btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.ff-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 1.5em;
+  padding: 11px 26px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 10px -2px #bf5fd242;
+  background: #f8edff;
+  color: #a83898;
+  outline: none;
+  transition: transform 0.10s, box-shadow 0.15s, background 0.18s;
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ff-btn.ff-btn-primary {
+  background: linear-gradient(90deg, #ffb6c1 0%, #dda0dd 60%, #ffd700 100%);
+  color: #6c226c;
+  box-shadow: 0 2px 16px 0 #f5d3fd8f;
+}
+
+.ff-btn.ff-btn-primary:disabled {
+  color: #e2a3c9;
+  background: #f2d4e559;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.ff-btn.ff-btn-primary:active,
+.ff-btn.ff-btn-flirty:active {
+  transform: scale(0.96);
+}
+.ff-btn.ff-btn-secondary {
+  background: #efddee;
+  color: #ad43b2;
+}
+.ff-btn.ff-btn-flirty {
+  background: linear-gradient(90deg, #ffd700 20%, #ffb6c1 90%);
+  color: #883276;
+  box-shadow: 0 2px 10px #ffd70080;
+}
+
+.sparkle {
+  position: relative;
+}
+.sparkle-anim {
+  display: inline-block;
+  margin-left: 8px;
+  width: 1.3em;
+  height: 1.3em;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='16,0 19,13 32,16 19,19 16,32 13,19 0,16 13,13' fill='%23fff0e8'/%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 16 16;30 16 16;0 16 16' dur='1.1s' repeatCount='indefinite'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  animation: sparkle-spin 1.2s linear infinite;
+  opacity: 0.72;
+}
+@keyframes sparkle-spin {
+  0% { transform: rotate(0deg);}
+  80% { transform: rotate(32deg);}
+  100% { transform: rotate(0deg);}
+}
+
+.ff-btn:hover .sparkle-anim {
+  opacity: 1;
+  filter: drop-shadow(0 0 9px #ffe2fb) brightness(1.07);
+  animation-duration: 0.85s !important;
+}
+
+.ff-result-area {
+  width: 100%;
+  min-height: 2.2em;
+  margin-top: 12px;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.ff-result {
+  background: rgba(255,255,255,0.84);
+  border-radius: 1.1em;
+  padding: 13px 18px 13px 18px;
+  margin-bottom: 6px;
+  box-shadow: 0 1.6px 14px -6px #f49cfa38;
+  color: #b30065;
+  font-weight: 620;
+  letter-spacing: 0.03em;
+  font-size: 1.17rem;
+  text-align: center;
+  animation: ff-result-pop 0.75s cubic-bezier(.71,.3,.3,1.24);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@keyframes ff-result-pop {
+  0% { transform: scale(0.8); opacity:0; }
+  57% { transform: scale(1.15);}
+  87% { transform: scale(0.95);}
+  100% { transform: scale(1); opacity:1;}
+}
+
+.animate-pop {
+  animation: ff-result-pop 0.8s cubic-bezier(.75,.36,.35,1.24);
+}
+
+.ff-flirty-line {
+  background: linear-gradient(90deg, #ffd70045 0%, #ffb6c165 80%);
+  border-radius: 0.85em;
+  padding: 9px 15px;
+  color: #c432ba;
+  font-size: 1.05rem;
+  font-style: italic;
+  animation: ff-flirty-fade 0.82s cubic-bezier(.56,.14,.33,1.34);
+  box-shadow: 0 1px 7px -2px #ffd70060;
+}
+
+@keyframes ff-flirty-fade {
+  from { opacity:0; filter: blur(8px);}
+  60% { filter: blur(1.5px);}
+  to { opacity:1; filter: blur(0);}
+}
+
+.animate-fadein {
+  animation: ff-flirty-fade 0.82s cubic-bezier(.68,.11,.38,1.02);
+}
+
+@media (max-width: 600px) {
+  .flirtfusion-card {
+    max-width: 99vw;
+    padding: 1.3rem 0.6rem 1.7rem 0.6rem;
+  }
+  .flirtfusion-center {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .ff-title {
+    font-size: 1.45rem;
+  }
+}
