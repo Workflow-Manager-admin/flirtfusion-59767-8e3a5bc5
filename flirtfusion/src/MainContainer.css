@@ -1,3 +1,5 @@
+/* --- Responsive and visually harmonious layout for both sidebars and focal card --- */
+
 .flirtfusion-bg {
   min-height: 100vh;
   background: linear-gradient(135deg, #ffb6c1 0%, #dda0dd 50%, #ffd700 100%);
@@ -5,8 +7,18 @@
   overflow-x: hidden;
   box-sizing: border-box;
   width: 100vw;
+
+  /*
+    Arrange children: left sidebar, center, right sidebar.
+    Flex is used for desktop/tablet, block for mobile.
+  */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
 }
 
+/* Floating background as before */
 .floating-bg-anim {
   pointer-events: none;
   position: absolute;
@@ -20,7 +32,6 @@
 .floating-shape {
   position: absolute;
   animation: ff-float infinite linear;
-  /* Will randomize animationDuration inline */
   opacity: 0.7;
   filter: drop-shadow(0 2px 6px rgba(255,192,203,0.12));
   user-select: none;
@@ -35,6 +46,7 @@
   100% { transform: translateY(-96vh) scale(1.15) rotate(9deg); opacity: 0;}
 }
 
+/* Center the compatibility card, taking up available space between sidebars */
 .flirtfusion-center {
   display: flex;
   align-items: center;
@@ -42,22 +54,28 @@
   min-height: 100vh;
   z-index: 1;
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 36px 0;
+  flex: 1 1 0%;
+  /* Extra for mobile harmony (overridden in media) */
 }
 
+/* --- Central card: soft, rounded, box-shadow, responsive --- */
 .flirtfusion-card {
-  background: rgba(255, 255, 255, 0.23);
-  box-shadow: 0 6px 32px 4px rgba(173, 152, 255, 0.13), 0 1.5px 10px 0 rgba(255,184,222,0.18);
-  border-radius: 2.2rem;
-  padding: 2.6rem 2.3rem 2rem 2.3rem;
-  max-width: 370px;
-  width: 96vw;
+  background: rgba(255, 255, 255, 0.26);
+  box-shadow:
+    0 7px 40px 8px rgba(173, 152, 255, 0.13), 
+    0 2.5px 10px 0 rgba(255,184,222,0.18),
+    0 0.5px 42px 0 rgba(240,205,236,0.13);
+  border-radius: 2.35rem;
+  padding: 2.8rem 2.3rem 2.1rem 2.3rem;
+  max-width: 400px;
+  width: 97vw;
+  min-width: 0; /* so it can shrink on mobile */
   backdrop-filter: blur(14px) brightness(1.02);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   animation: ff-card-fadein 1s cubic-bezier(.41,.76,.45,1.11);
 }
 
@@ -251,16 +269,72 @@
   animation: ff-flirty-fade 0.82s cubic-bezier(.68,.11,.38,1.02);
 }
 
-@media (max-width: 600px) {
-  .flirtfusion-card {
-    max-width: 99vw;
-    padding: 1.3rem 0.6rem 1.7rem 0.6rem;
+/* --- Responsive adjustments: Mobile-first breakpoints --- */
+@media (max-width: 1023px) {
+  .flirtfusion-bg {
+    /* Sidebars shrink, central stays focal */
+    flex-direction: row;
   }
   .flirtfusion-center {
     padding-left: 0;
     padding-right: 0;
+    min-width: 0;
+  }
+  .flirtfusion-card {
+    max-width: 94vw;
+    padding: 2rem 0.6rem 1.5rem 0.6rem;
+    font-size: 0.97rem;
   }
   .ff-title {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
   }
+}
+
+@media (max-width: 800px) {
+  .flirtfusion-bg {
+    flex-direction: column;
+    min-height: auto;
+    width: 100vw;
+  }
+  .flirtfusion-center {
+    order: 2;
+    min-height: unset;
+    padding: 12px 0 22px 0;
+    width: 100vw;
+  }
+  .flirtfusion-card {
+    max-width: 97vw;
+    border-radius: 1.35rem;
+    padding: 1.1rem 0.25rem 1.3rem 0.25rem;
+    font-size: 0.97rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .flirtfusion-bg {
+    flex-direction: column;
+    width: 100vw;
+    min-height: auto;
+  }
+  .flirtfusion-center {
+    padding: 2.5vw 0.6vw 3vw 0.6vw;
+    width: 100vw;
+    min-width: 0;
+    flex: unset;
+    order: 2;
+    min-height: 0;
+  }
+  .flirtfusion-card {
+    max-width: 100vw;
+    border-radius: 0.85em;
+    padding: 1.2em 0.28em 1.3em 0.13em;
+    font-size: 0.98rem;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .ff-title {
+    font-size: 1.06rem;
+  }
+  /* ensure space between stacked sidebars and center */
 }
