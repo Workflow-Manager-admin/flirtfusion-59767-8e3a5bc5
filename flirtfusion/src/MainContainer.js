@@ -19,9 +19,11 @@ const flirtyLines = [
   "You’re the reason Cupid even has a job.",
 ];
 
-// PUBLIC_INTERFACE
+/**
+ * PUBLIC_INTERFACE
+ * Main container for Love Chamber app
+ */
 function MainContainer() {
-  /** Main container for FlirtFusion app */
   const [name, setName] = useState("");
   const [crush, setCrush] = useState("");
   const [result, setResult] = useState("");
@@ -33,7 +35,6 @@ function MainContainer() {
   const handleCalculate = (e) => {
     e.preventDefault();
     if (!name.trim() || !crush.trim()) return;
-    // "Random" but deterministic based on both names
     const score =
       (name.charCodeAt(0) * crush.charCodeAt(crush.length - 1) +
         name.length +
@@ -69,7 +70,7 @@ function MainContainer() {
       {/* Main Center Card */}
       <div className="flirtfusion-center" style={{ flex: 1, zIndex: 1, position: "relative" }}>
         <div className="flirtfusion-card">
-          <h2 className="ff-title">💘 FlirtFusion</h2>
+          <h2 className="ff-title">💘 Love Chamber</h2>
           <p className="ff-tagline">
             Enter your name and your crush’s name to see your spark score!
           </p>

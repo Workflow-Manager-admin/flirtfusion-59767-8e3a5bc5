@@ -1,11 +1,11 @@
 # Lightweight React Template for KAVIA
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+This project provides a minimal React template (now branded as Love Chamber) with a clean, modern UI and minimal dependencies.
 
 ## Features
 
 - **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
+- **Modern UI**: Clean, responsive design with Love Chamber brand styling
 - **Fast**: Minimal dependencies for quick loading times
 - **Simple**: Easy to understand and modify
 
