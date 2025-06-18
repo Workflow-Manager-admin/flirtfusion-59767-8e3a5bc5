@@ -7,35 +7,32 @@
 <i> [webpack-dev-server] On Your Network (IPv4): http://172.17.0.2:3000/
 <i> [webpack-dev-server] Content not from webpack is served from './public' directory
 Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-asset bundle.js 1.44 MiB [emitted] (name: main)
+asset bundle.js 1.46 MiB [emitted] (name: main)
 asset index.html 1.98 KiB [emitted]
 runtime modules 27.6 KiB 14 modules
-javascript modules 1.29 MiB
+javascript modules 1.3 MiB
   modules by path ./node_modules/ 1.24 MiB 32 modules
-  modules by path ./src/ 33.4 KiB
-    modules by path ./src/*.css 21.4 KiB 8 modules
-    modules by path ./src/*.js 9.87 KiB 4 modules
-    ./src/sidebar/MoodBoard.js 2.1 KiB [built] [code generated]
+  modules by path ./src/ 43.7 KiB
+    modules by path ./src/*.css 27.4 KiB 10 modules
+    modules by path ./src/*.js 11 KiB 5 modules
+    modules by path ./src/sidebar/*.js 5.28 KiB 2 modules
   modules by path ./.ve/ 15.1 KiB
     modules by path ./.ve/*.js 10.6 KiB 2 modules
     modules by path ./.ve/*.css 2.93 KiB 2 modules
     ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
 data:image/svg+xml,%3Csvg width=%27.. 409 bytes [built] [code generated]
-webpack 5.99.9 compiled successfully in 1262 ms
+webpack 5.99.9 compiled successfully in 1285 ms
 assets by status 1.98 KiB [cached] 1 asset
-assets by path *.js 1.49 MiB
+assets by path *.js 1.46 MiB
   asset bundle.js 1.46 MiB [emitted] (name: main)
-  asset main.50d2626152e13258430c.hot-update.js 31.6 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.50d2626152e13258430c.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.49 MiB = bundle.js 1.46 MiB main.50d2626152e13258430c.hot-update.js 31.6 KiB
-cached modules 1.28 MiB [cached] 50 modules
+  asset main.43a50ce3dacaa2ce5f5b.hot-update.js 854 bytes [emitted] [immutable] [hmr] (name: main)
+asset main.43a50ce3dacaa2ce5f5b.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.46 MiB = bundle.js 1.46 MiB main.43a50ce3dacaa2ce5f5b.hot-update.js 854 bytes
+cached modules 1.29 MiB [cached] 54 modules
 runtime modules 27.6 KiB 14 modules
-javascript modules 17.4 KiB
-  modules by path ./src/*.js 8.19 KiB
-    ./src/MainContainer.js 7.16 KiB [built] [code generated]
-    ./src/RightSidebar.js 1.03 KiB [built] [code generated]
-  modules by path ./src/*.css 6 KiB
-    ./src/RightSidebar.css 2.25 KiB [built] [code generated]
-    ./node_modules/css-loader/dist/cjs.js!./src/RightSidebar.css 3.75 KiB [built] [code generated]
-  ./src/sidebar/FlirtyStack.js 3.17 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 151 ms
+./src/sidebar/FlirtyStack.js 3.17 KiB [built]
+webpack 5.99.9 compiled successfully in 59 ms
+assets by status 1.46 MiB [cached] 2 assets
+cached modules 1.3 MiB (javascript) 27.6 KiB (runtime) [cached] 68 modules
+./src/RightSidebar.js 1.03 KiB [built]
+webpack 5.99.9 compiled successfully in 28 ms
